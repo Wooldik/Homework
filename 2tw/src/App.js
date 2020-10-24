@@ -19,12 +19,18 @@ export default class App extends Component {
 		})
 	}
 
+	textButton = (text) => {
+		this.setState({
+			header: text
+		})
+	}
+
 
 	render() {
 		return (<>
 			<h1>{this.state.header}</h1>
 			<input type="text" onChange={this.textInput}></input>
-			<Button />
+			<Button btnTextClick={this.textButton} />
 		</>)
 	}
 }
