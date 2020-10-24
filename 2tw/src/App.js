@@ -30,7 +30,7 @@ export default class App extends Component {
 		return (<>
 			<h1>{this.state.header}</h1>
 			<input type="text" onChange={this.textInput}></input>
-			<Button btnTextClick={this.textButton} />
+			<Button btnTextClick={this.textButton} textValue={this.state.inputValue} />
 		</>)
 	}
 }
