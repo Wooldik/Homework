@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import Button from './components/Button'
 export default class App extends Component {
-	// state = {
+	state = {
+		isHeaderShown: false,
+		header: '',
+		inputValue: ''
+	}
 
-	// }
+	textInput = ({ target }) => {
+		this.setState({
+			inputValue: target.value
+		})
+
+	}
+	onButton = () => {
+		this.setState({
+			isHeaderShown: !this.isHeaderShown
+		})
+	}
 
 
 	render() {
 		return (<>
-			<h1></h1>
-			<input type="text"></input>
+			<h1>{this.state.header}</h1>
+			<input type="text" onChange={this.textInput}></input>
 			<Button />
 		</>)
 	}
