@@ -10,6 +10,7 @@ export default class App extends Component {
 		return (<>
 			<h1></h1>
 			<input type="text"></input>
+			<Button />
 		</>)
 	}
 }
