@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Button from './components/Button'
 export default class App extends Component {
 	state = {
-		isHeaderShown: false,
 		header: '',
 		inputValue: ''
 	}
@@ -13,11 +12,7 @@ export default class App extends Component {
 		})
 
 	}
-	onButton = () => {
-		this.setState({
-			isHeaderShown: !this.isHeaderShown
-		})
-	}
+
 
 	textButton = (text) => {
 		this.setState({
